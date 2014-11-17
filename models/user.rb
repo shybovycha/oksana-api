@@ -1,6 +1,6 @@
 require "sequel"
 
-if RACK_ENV == "production"
+if ENV['RACK_ENV'] == "production"
     DB = Sequel.connect('postgres://cboodskeuuwfdb:wBzw7HbeB58VGPOwgsqNu4oNYn@ec2-54-228-227-87.eu-west-1.compute.amazonaws.com:5432/dbv6ej3ig9h57k')
 else
     DB = Sequel.connect(adapter: 'mysql2', host: 'localhost', database: 'oksana_api', user: 'root', password: 'abcABC123')

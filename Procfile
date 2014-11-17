@@ -1,1 +1,1 @@
-web: bundle exec rackup config.ru
+web: RACK_ENV=production bundle exec rackup config.ru
