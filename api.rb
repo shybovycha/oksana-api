@@ -5,6 +5,10 @@ module Rest
     class API < Grape::API
         format :json
 
+        get do
+            { success: true }
+        end
+
         resource "users" do
             desc "Sign up as a new user and get an API key"
             params do
